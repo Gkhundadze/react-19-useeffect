@@ -1,0 +1,95 @@
+.lifecycle-diagram {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 30px 0;
+  padding: 30px 20px;
+  background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+  border-radius: 12px;
+  border: 2px solid #e2e8f0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.lifecycle-stage {
+  text-align: center;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+  border: 2px solid #667eea;
+  flex: 1;
+  max-width: 200px;
+  transition: all 0.3s ease;
+}
+
+.lifecycle-stage:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.25);
+}
+
+.stage-icon {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.stage-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #667eea;
+  margin-bottom: 8px;
+}
+
+.stage-description {
+  font-size: 0.9rem;
+  color: #4a5568;
+  line-height: 1.4;
+}
+
+.lifecycle-arrow {
+  font-size: 2rem;
+  color: #667eea;
+  font-weight: bold;
+  margin: 0 15px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+}
+
+@media (max-width: 768px) {
+  .lifecycle-diagram {
+    flex-direction: column;
+    padding: 20px 15px;
+  }
+  
+  .lifecycle-stage {
+    max-width: 100%;
+    margin-bottom: 15px;
+    padding: 15px;
+  }
+  
+  .lifecycle-arrow {
+    transform: rotate(90deg);
+    margin: 10px 0;
+  }
+  
+  .stage-icon {
+    font-size: 2rem;
+  }
+  
+  .stage-title {
+    font-size: 1.1rem;
+  }
+  
+  .stage-description {
+    font-size: 0.85rem;
+  }
+}

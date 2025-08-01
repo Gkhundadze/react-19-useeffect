@@ -1,0 +1,146 @@
+.code-block-container {
+  margin: 20px 0;
+}
+
+.code-block-title {
+  background: #4a5568;
+  color: white;
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  margin-bottom: 0;
+}
+
+.code-block {
+  background: #2d3748;
+  border-radius: 8px;
+  overflow-x: auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.code-block-title + .code-block {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.code-block pre {
+  margin: 0;
+  padding: 25px;
+  overflow-x: auto;
+}
+
+.code-block code {
+  font-family: 'Fira Code', 'Monaco', 'Cascadia Code', 'Roboto Mono', monospace;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #e2e8f0;
+}
+
+/* Prism theme overrides */
+.code-block .token.comment,
+.code-block .token.prolog,
+.code-block .token.doctype,
+.code-block .token.cdata {
+  color: #718096;
+}
+
+.code-block .token.punctuation {
+  color: #a0aec0;
+}
+
+.code-block .token.property,
+.code-block .token.tag,
+.code-block .token.constant,
+.code-block .token.symbol,
+.code-block .token.deleted {
+  color: #f56565;
+}
+
+.code-block .token.boolean,
+.code-block .token.number {
+  color: #ed8936;
+}
+
+.code-block .token.selector,
+.code-block .token.attr-name,
+.code-block .token.string,
+.code-block .token.char,
+.code-block .token.builtin,
+.code-block .token.inserted {
+  color: #68d391;
+}
+
+.code-block .token.operator,
+.code-block .token.entity,
+.code-block .token.url,
+.code-block .language-css .token.string,
+.code-block .style .token.string,
+.code-block .token.variable {
+  color: #4fd1c7;
+}
+
+.code-block .token.atrule,
+.code-block .token.attr-value,
+.code-block .token.function,
+.code-block .token.class-name {
+  color: #fbb6ce;
+}
+
+.code-block .token.keyword {
+  color: #b794f6;
+}
+
+.code-block .token.regex,
+.code-block .token.important {
+  color: #f6ad55;
+}
+
+/* Scrollbar styling */
+.code-block pre::-webkit-scrollbar {
+  height: 8px;
+}
+
+.code-block pre::-webkit-scrollbar-track {
+  background: #1a202c;
+}
+
+.code-block pre::-webkit-scrollbar-thumb {
+  background: #4a5568;
+  border-radius: 4px;
+}
+
+.code-block pre::-webkit-scrollbar-thumb:hover {
+  background: #718096;
+}
+
+@media (max-width: 968px) {
+  .code-block pre {
+    padding: 20px;
+  }
+  
+  .code-block code {
+    font-size: 1rem;
+  }
+  
+  .code-block-title {
+    padding: 10px 16px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .code-block pre {
+    padding: 18px;
+  }
+  
+  .code-block code {
+    font-size: 0.95rem;
+  }
+  
+  .code-block-title {
+    padding: 8px 14px;
+    font-size: 0.95rem;
+  }
+}

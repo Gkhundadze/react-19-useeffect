@@ -1,0 +1,143 @@
+.info-box {
+  margin: 25px 0;
+  border-radius: 10px;
+  padding: 20px;
+  border-left: 5px solid;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+}
+
+.info-box-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.info-box-icon {
+  font-size: 1.5rem;
+  margin-right: 12px;
+}
+
+.info-box-title {
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.info-box-content {
+  line-height: 1.7;
+  font-size: 1.1rem;
+}
+
+.info-box-content p {
+  margin-bottom: 10px;
+}
+
+.info-box-content p:last-child {
+  margin-bottom: 0;
+}
+
+.info-box-content ul {
+  margin-left: 20px;
+}
+
+.info-box-content li {
+  margin-bottom: 8px;
+}
+
+/* Success variant */
+.info-box--success {
+  background: #f0fff4;
+  border-left-color: #38a169;
+  color: #22543d;
+}
+
+.info-box--success .info-box-title {
+  color: #2f855a;
+}
+
+/* Warning variant */
+.info-box--warning {
+  background: #fffbf0;
+  border-left-color: #ed8936;
+  color: #744210;
+}
+
+.info-box--warning .info-box-title {
+  color: #c05621;
+}
+
+/* Error variant */
+.info-box--error {
+  background: #fff5f5;
+  border-left-color: #e53e3e;
+  color: #742a2a;
+}
+
+.info-box--error .info-box-title {
+  color: #c53030;
+}
+
+/* New feature variant */
+.info-box--new {
+  background: #e6fffa;
+  border-left-color: #319795;
+  color: #234e52;
+}
+
+.info-box--new .info-box-title {
+  color: #2c7a7b;
+}
+
+/* Info variant (default) */
+.info-box--info {
+  background: #ebf8ff;
+  border-left-color: #3182ce;
+  color: #2a4365;
+}
+
+.info-box--info .info-box-title {
+  color: #2b6cb0;
+}
+
+@media (max-width: 968px) {
+  .info-box {
+    padding: 18px;
+    margin: 20px 0;
+  }
+  
+  .info-box-icon {
+    font-size: 1.3rem;
+    margin-right: 10px;
+  }
+  
+  .info-box-title {
+    font-size: 1.15rem;
+  }
+  
+  .info-box-content {
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .info-box {
+    padding: 16px;
+    margin: 18px 0;
+  }
+  
+  .info-box-header {
+    margin-bottom: 10px;
+  }
+  
+  .info-box-icon {
+    font-size: 1.2rem;
+    margin-right: 8px;
+  }
+  
+  .info-box-title {
+    font-size: 1.1rem;
+  }
+  
+  .info-box-content {
+    font-size: 1rem;
+  }
+}

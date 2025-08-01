@@ -1,0 +1,31 @@
+{
+  "name": "react-19-useeffect-slideshow",
+  "version": "1.0.0",
+  "description": "Interactive React 19 useEffect Lifecycle Learning Slideshow",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^4.0.0",
+    "vite": "^5.0.0"
+  },
+  "keywords": [
+    "react",
+    "react-19",
+    "useeffect",
+    "lifecycle",
+    "slideshow",
+    "learning"
+  ],
+  "author": "Claude Code",
+  "license": "MIT"
+}

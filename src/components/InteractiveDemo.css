@@ -1,0 +1,270 @@
+.interactive-demo {
+  background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+  border-radius: 12px;
+  padding: 25px;
+  margin: 30px 0;
+  border: 2px solid #e2e8f0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.demo-header h4 {
+  color: #2d3748;
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+  text-align: center;
+  padding: 12px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.demo-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.demo-controls {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.demo-button {
+  padding: 12px 24px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(102, 126, 234, 0.2);
+}
+
+.demo-button:hover {
+  background: #5a67d8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.demo-button.secondary {
+  background: #718096;
+}
+
+.demo-button.secondary:hover {
+  background: #4a5568;
+}
+
+.demo-button.warning {
+  background: #ed8936;
+}
+
+.demo-button.warning:hover {
+  background: #dd6b20;
+}
+
+.demo-output {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  min-height: 120px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Timer Demo Styles */
+.timer-display {
+  text-align: center;
+  padding: 20px;
+  background: #f7fafc;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.timer-value {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #2d3748;
+  margin-bottom: 10px;
+}
+
+.timer-status {
+  font-size: 1.2rem;
+  color: #4a5568;
+}
+
+/* User Display Styles */
+.user-display {
+  text-align: center;
+  padding: 20px;
+}
+
+.loading {
+  font-size: 1.2rem;
+  color: #667eea;
+  padding: 20px;
+}
+
+.user-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  background: #f7fafc;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.user-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid #667eea;
+}
+
+.user-info h5 {
+  margin: 0 0 8px 0;
+  font-size: 1.3rem;
+  color: #2d3748;
+}
+
+.user-info p {
+  margin: 0 0 5px 0;
+  color: #4a5568;
+  font-size: 1rem;
+}
+
+.user-info small {
+  color: #718096;
+  font-size: 0.9rem;
+}
+
+/* Memory Leak Demo Styles */
+.timer-comparison {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.timer-section {
+  background: #f7fafc;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.timer-section h5 {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+.timer-display.bad {
+  background: #fed7d7;
+  color: #742a2a;
+  padding: 15px;
+  border-radius: 6px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.timer-display.good {
+  background: #c6f6d5;
+  color: #22543d;
+  padding: 15px;
+  border-radius: 6px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Logs Styles */
+.demo-logs {
+  background: #2d3748;
+  color: #e2e8f0;
+  padding: 15px;
+  border-radius: 8px;
+  font-family: 'Fira Code', 'Monaco', 'Cascadia Code', 'Roboto Mono', monospace;
+  font-size: 0.9rem;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.demo-logs strong {
+  display: block;
+  margin-bottom: 10px;
+  color: #fbb6ce;
+}
+
+.log-entry {
+  margin-bottom: 5px;
+  padding: 3px 0;
+  border-left: 2px solid #4a5568;
+  padding-left: 8px;
+}
+
+.log-entry:last-child {
+  color: #68d391;
+  border-left-color: #68d391;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .interactive-demo {
+    padding: 20px;
+    margin: 20px 0;
+  }
+  
+  .demo-header h4 {
+    font-size: 1.2rem;
+    padding: 10px;
+  }
+  
+  .demo-controls {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .demo-button {
+    width: 100%;
+    max-width: 250px;
+  }
+  
+  .timer-comparison {
+    grid-template-columns: 1fr;
+  }
+  
+  .user-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+  }
+  
+  .user-avatar {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .timer-value {
+    font-size: 2rem;
+  }
+}
+
+/* Animation for new log entries */
+@keyframes logEntryAnimation {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.log-entry:last-child {
+  animation: logEntryAnimation 0.3s ease-in-out;
+}

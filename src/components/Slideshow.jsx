@@ -2,9 +2,25 @@ import React, { useState, useEffect } from 'react'
 import slides from '../data/slides'
 import Navigation from './Navigation'
 import './Slideshow.css'
+import 'prismjs/themes/prism-tomorrow.css'
 
 function Slideshow() {
-  const [currentSlide, setCurrentSlide] = useState(0)
+  // Initialize currentSlide with localStorage value or default to 0
+  const [currentSlide, setCurrentSlide] = useState(() => {
+    try {
+      const savedProgress = localStorage.getItem('slideshow-progress')
+      if (savedProgress) {
+        const progress = JSON.parse(savedProgress)
+        // Validate that the saved slide index is within bounds
+        if (progress.currentSlide >= 0 && progress.currentSlide < slides.length) {
+          return progress.currentSlide
+        }
+      }
+    } catch (error) {
+      console.warn('Failed to load slideshow progress from localStorage:', error)
+    }
+    return 0
+  })
 
   const nextSlide = () => {
     setCurrentSlide(prev => Math.min(prev + 1, slides.length - 1))
@@ -47,11 +63,15 @@ function Slideshow() {
     document.title = `${slides[currentSlide].title} - React 19 useEffect Learning`
     
     // Track slide progress in localStorage
-    localStorage.setItem('slideshow-progress', JSON.stringify({
-      currentSlide,
-      timestamp: Date.now(),
-      totalSlides: slides.length
-    }))
+    try {
+      localStorage.setItem('slideshow-progress', JSON.stringify({
+        currentSlide,
+        timestamp: Date.now(),
+        totalSlides: slides.length
+      }))
+    } catch (error) {
+      console.warn('Failed to save slideshow progress to localStorage:', error)
+    }
   }, [currentSlide])
 
   // React 19: Code syntax highlighting effect
@@ -61,6 +81,35 @@ function Slideshow() {
       window.Prism.highlightAll()
     }
   }, [currentSlide])
+
+  // Optional: Load progress on component mount (alternative approach)
+  useEffect(() => {
+    const loadSavedProgress = () => {
+      try {
+        const savedProgress = localStorage.getItem('slideshow-progress')
+        if (savedProgress) {
+          const progress = JSON.parse(savedProgress)
+          
+          // Check if the saved progress is recent (within last 24 hours)
+          const isRecent = Date.now() - progress.timestamp < 24 * 60 * 60 * 1000
+          
+          if (isRecent && progress.currentSlide >= 0 && progress.currentSlide < slides.length) {
+            console.log(`Resuming from slide ${progress.currentSlide + 1} of ${progress.totalSlides}`)
+            // Only set if different from current state to avoid unnecessary re-renders
+            if (progress.currentSlide !== currentSlide) {
+              setCurrentSlide(progress.currentSlide)
+            }
+          }
+        }
+      } catch (error) {
+        console.warn('Failed to load slideshow progress:', error)
+      }
+    }
+
+    // Only load on mount if we haven't already initialized from localStorage
+    // This prevents overriding the initial state
+    loadSavedProgress()
+  }, []) // Empty dependency array - only run on mount
 
   return (
     <div className="slideshow-container">

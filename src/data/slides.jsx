@@ -559,19 +559,19 @@ useEffect(() => {
             <h4 style={{ color: '#d53f8c', borderBottom: '2px solid #fc8181', paddingBottom: '5px' }}>🚀 Advanced Patterns</h4>
             <ul style={{ listStyle: 'none', padding: 0 }}>
               <li style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px' }}>
-                <StatusIcon type="error" size="small" />
+                <StatusIcon type="success" size="small" />
                 <span><strong>Race Conditions</strong> - Handle overlapping effects</span>
               </li>
               <li style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px' }}>
-                <StatusIcon type="error" size="small" />
+                <StatusIcon type="success" size="small" />
                 <span><strong>Custom Hooks</strong> - Reusable effect logic</span>
               </li>
               <li style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px' }}>
-                <StatusIcon type="error" size="small" />
+                <StatusIcon type="success" size="small" />
                 <span><strong>Performance Optimization</strong> - Avoid unnecessary re-runs</span>
               </li>
               <li style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px' }}>
-                <StatusIcon type="error" size="small" />
+                <StatusIcon type="success" size="small" />
                 <span><strong>Testing Effects</strong> - Mock and test async operations</span>
               </li>
             </ul>

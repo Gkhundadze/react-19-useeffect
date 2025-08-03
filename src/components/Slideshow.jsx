@@ -66,7 +66,6 @@ function Slideshow() {
     <div className="slideshow-container">
       <header className="slideshow-header">
         <h1>📚 Session 7: React 19 Component Lifecycle and useEffect</h1>
-        <p>Interactive Learning Guide for Modern React Functional Components</p>
         <div className="react-version-badge">React 19.0</div>
       </header>
 
